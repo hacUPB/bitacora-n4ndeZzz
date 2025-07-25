@@ -1,32 +1,33 @@
-Actividad 1:
-¿Qué es un computador digital moderno?
-Es una máquina electrónica que procesa datos y ejecuta instrucciones almacenadas en memoria, realizando operaciones lógicas y aritméticas para resolver problemas.
+Actividad 1:  
+¿Qué es un computador digital moderno?  
+Es una máquina electrónica que procesa datos y ejecuta instrucciones almacenadas en memoria, realizando operaciones lógicas y aritméticas para resolver problemas.  
 
-¿Cuáles son sus partes?
-Unidad Central de Procesamiento (CPU): Ejecuta instrucciones.
-Memoria: Almacena datos e instrucciones.
-Dispositivos de entrada/salida: Permiten comunicarse con el exterior.
-Bus de datos: Canal que conecta las partes para transferir información.
-
-
-Actividad 2
-¿Qué es un programa?
-Una serie de instrucciones que le dicen a la computadora qué hacer.
-¿Qué es un lenguaje ensamblador?
-Un lenguaje de bajo nivel que usa instrucciones simbólicas que se traducen directamente a lenguaje máquina.
-¿Qué es lenguaje de máquina?
-El código binario que entiende directamente el procesador para ejecutar instrucciones.
+¿Cuáles son sus partes?  
+Unidad Central de Procesamiento (CPU): Ejecuta instrucciones.  
+Memoria: Almacena datos e instrucciones.  
+Dispositivos de entrada/salida: Permiten comunicarse con el exterior.  
+Bus de datos: Canal que conecta las partes para transferir información.  
 
 
-Actividad 3
-¿Qué son PC, D y A?
-PC (Program Counter): Registro que indica la dirección de la siguiente instrucción a ejecutar.
-D: Registro donde se almacenan datos temporales para operaciones.
-A: Registro que puede contener una dirección de memoria o un valor inmediato.
+Actividad 2  
+¿Qué es un programa?  
+Una serie de instrucciones que le dicen a la computadora qué hacer.  
+¿Qué es un lenguaje ensamblador?  
+Un lenguaje de bajo nivel que usa instrucciones simbólicas que se traducen directamente a lenguaje máquina.  
+¿Qué es lenguaje de máquina?  
+El código binario que entiende directamente el procesador para ejecutar instrucciones.  
+
+---------------------------------------------------------  
+
+Actividad 3  
+¿Qué son PC, D y A?  
+PC (Program Counter): Registro que indica la dirección de la siguiente instrucción a ejecutar.  
+D: Registro donde se almacenan datos temporales para operaciones.  
+A: Registro que puede contener una dirección de memoria o un valor inmediato.  
 
 
-¿Para qué los usa la CPU?
-Para controlar el flujo de ejecución y manipular datos durante la operación del programa.
+¿Para qué los usa la CPU?  
+Para controlar el flujo de ejecución y manipular datos durante la operación del programa.  
 
 8)
 1. ¿Qué hace este programa?
