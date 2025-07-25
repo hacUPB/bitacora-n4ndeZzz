@@ -31,5 +31,40 @@ M=-1
 @LOOP
 0;JMP
 
+14)
+@R1     
+A=M 
+D=M    
+@R4      
+M=D    
+
+15)
+@R0
+D=M
+@R2
+M=D
+
+(LOOP)
+@R1
+D=M
+@END
+D;JEQ
+
+@R2
+A=M
+M=-1
+
+@R2
+M=M+1
+
+@R1
+M=M-1
+
+@LOOP
+0;JMP
+
+(END)
+@END
+0;JMP
 
 
