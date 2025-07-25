@@ -79,3 +79,18 @@ CONT indica el punto donde se continúa la ejecución después de que i llegue a
 i es una variable simbólica, está en RAM y es un espacio para guardar datos.
 CONT es una etiqueta, está en ROM
 
+
+
+
+16)
+1. ¿Qué hace este programa?
+Suma los 10 elementos de un arreglo (de tamaño 10) que está en memoria y guarda el resultado en la variable sum. Es decir, calcula la suma total de todos los valores almacenados en el arrego.
+
+2. ¿Cuál es la dirección base de arr en la memoria RAM?
+La dirección base del arreglo está almacenada en R0. o sea que R0 contiene la posición inicial en la RAM donde comienza el arreglo.
+
+3. ¿Cuál es la dirección base de sum en la memoria RAM y por qué?
+La variable sum está almacenada en R1. Se usa R1 porque en el código asignamos que el acumulador sum se guarde en esa dirección, aprovechando los registros simbólicos R0 a R15 que se usan para variables predeterminadas.
+
+4. ¿Cuál es la dirección base de j en la memoria RAM y por qué?
+El índice j se guarda en R2. Se eligió R2 porque es otro registro simbólico disponible para variables temporales, esto porque podemos controlar el contador del ciclo sin interferir con arr ni sum.
