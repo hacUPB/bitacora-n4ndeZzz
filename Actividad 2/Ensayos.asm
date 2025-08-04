@@ -1,117 +1,48 @@
-
-@SCREEN
+@SCREEN      // Dirección base de la pantalla (16384)
 D=A
-@screenBase
-M=D     
+@screenBase  // Variable simbólica donde guardamos SCREEN
+M=D
 
-@KBD
+@KBD         // Dirección del teclado (24576)
 D=A
-@kbd
-M=D          // kbd = 24576
+@kbd         // Variable simbólica para teclado
+M=D
 
 (LOOP)
     // Leer teclado
     @kbd
-    A=M
-    D=M
-    @100
-    D=D-A
-    @DRAW
-    D;JEQ     // Si D == 0 (tecla 'd'), salta a DRAW
+    A=M         // Ir a dirección del teclado
+    D=M         // Leer valor (si una tecla está presionada, D != 0)
 
-    // Si no, borrar
+    @100
+    D=D-A       // Comparar con 100 (podrías usar @0 si solo quieres verificar si se presionó algo)
+
+    @DRAW
+    D;JEQ       // Si D == 0 (se presionó la tecla 100), ir a DRAW
+
     @screenBase
-    D=M
+    D=M         // Dirección base de pantalla
     @addr
-    M=D
+    M=D         // addr = dirección actual para borrar
 
     @7
     D=A
     @i
-    M=D
+    M=D         // i = 7, se borrarán 7 palabras de pantalla (líneas)
 
 (CLEAR_LOOP)
     @addr
     A=M
-    M=0
+    M=0         // Borrar contenido en addr
 
     @addr
-    M=M+1
+    M=M+1       // addr++
     @i
-    M=M-1
+    M=M-1       // i--
     D=M
     @CLEAR_LOOP
-    D;JGT
+    D;JGT       // Si i > 0, repetir
 
-    @LOOP
-    0;JMP
 
-(DRAW)
-    @screenBase
-    D=M
-    @addr
-    M=D
-
-    // Línea 1
-    @49152
-    D=A
-    @addr
-    A=M
-    M=D
-    @addr
-    M=M+1
-
-    // Línea 2
-    @49152
-    D=A
-    @addr
-    A=M
-    M=D
-    @addr
-    M=M+1
-
-    // Línea 3
-    @0
-    D=A
-    @addr
-    A=M
-    M=D
-    @addr
-    M=M+1
-
-    // Línea 4
-    @12288
-    D=A
-    @addr
-    A=M
-    M=D
-    @addr
-    M=M+1
-
-    // Línea 5
-    @0
-    D=A
-    @addr
-    A=M
-    M=D
-    @addr
-    M=M+1
-
-    // Línea 6
-    @33024
-    D=A
-    @addr
-    A=M
-    M=D
-    @addr
-    M=M+1
-
-    // Línea 7
-    @32256
-    D=A
-    @addr
-    A=M
-    M=D
-
-    @LOOP
-    0;JMP
+//En este intento lo deje incompleto debido a que el dibujo no lo logré, seguiré intentando porque quizá sea un error en pixeles.
+// la siguiente actividad está documentada en el reto
