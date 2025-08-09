@@ -1,3 +1,8 @@
+//Uso este espacio para dejar algunos codigos que nunca use debido a que les hice cambios, esto porque los mejoré o en otro caso, no me funcionaron
+
+//Este principalmente es en el que debíamos mostrar un dibujo al presionar D y he tenido fallas aqui debido a la posición en el teclado
+
+
 //lectura D
 (START)
 @KBD
