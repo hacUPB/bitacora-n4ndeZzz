@@ -1,9 +1,7 @@
 # 7)     
 - __¿Qué sucede cuando presionas la tecla “c”?__  
 
-Parece que funciona porque se dibuja una vez desde la función, pero enseguida el programa queda con un puntero inválido en el vector, provocando errores en los frames siguientes. Por lo que puede no dibujar nada, dibujar valores basura, o incluso crashear.
-
-- __¿Qué sucede cuando presionas la tecla “c”?__
+Parece que funciona porque se dibuja una vez desde la función, pero enseguida el programa queda con un puntero inválido en el vector, provocando errores en los frames siguientes. Por lo que puede no dibujar nada, dibujar valores basura, o incluso crashear.  
 
 Se ejecuta la función createObjectInStack(), que en realidad ahora crea un objeto en el heap con new Sphere(...).  
 

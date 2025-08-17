@@ -59,13 +59,13 @@ El programa va a buscar en memoria la esfera seleccionada y actualiza sus coorde
 # Problema en el código de selección y movimiento de esferas
 
 ## Error identificado
-En el código actual, cuando se selecciona una esfera con clic izquierdo, esta queda **permanentemente pegada al puntero del mouse**.  
+En el código actual, cuando se selecciona una esfera con click izquierdo, esta queda **permanentemente pegada al puntero del mouse**.  
 Esto sucede porque en la función `update()` siempre se actualiza la posición de la esfera seleccionada (`selectedSphere`) con las coordenadas del mouse.  
 Además, nunca se "suelta" la esfera porque no existe un evento `mouseReleased` que la deseleccione.
 
 ## Consecuencias
-- Una vez que haces clic sobre una esfera, seguirá moviéndose aunque ya no mantengas presionado el mouse.  
-- Si haces clic fuera de cualquier esfera, la selección previa no se desactiva.  
+- Una vez que se hace click sobre una esfera, seguirá moviéndose aunque ya no mantengas presionado el mouse.  
+- Si haces click fuera de cualquier esfera, la selección previa no se desactiva.  
 - (Opcional) También hay una fuga de memoria, ya que las esferas se crean con `new` y nunca se liberan.
 
 ## Solución propuesta
@@ -76,7 +76,7 @@ Además, nunca se "suelta" la esfera porque no existe un evento `mouseReleased` 
    Implementar `mouseReleased` para poner `selectedSphere = nullptr`.
 
 3. **Opcional (buena práctica):**  
-   - Descartar la selección si no se hace clic sobre ninguna esfera.  
+   - Descartar la selección si no se hace click sobre ninguna esfera.  
    - Liberar la memoria en el destructor o usar vectores de objetos en lugar de punteros.
 
 ## Código modificado (fragmentos relevantes)
