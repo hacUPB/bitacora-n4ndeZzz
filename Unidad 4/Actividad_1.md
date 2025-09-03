@@ -34,7 +34,12 @@ En un arreglo, insertar en medio requiere desplazar varios elementos, lo cual es
 
 ---
 
-### 7. En el código presentado, ¿Cómo se asegura que no haya fugas de memoria? ¿Qué papel juega el destructor en la clase `LinkedList`?
+### **7. Explica cómo cambia la estructura en memoria de una lista enlazada al agregar un nuevo nodo al final de la lista.**
+
+Cuando se agrega un nodo al final, se crea un nuevo nodo en el heap y se
+ajusta el puntero del último nodo existente para que apunte a este nuevo
+nodo. Esto no requiere mover los demás elementos, solo actualizar el
+último puntero.
 
 ---
 
@@ -55,3 +60,100 @@ Al final, todos los nodos son liberados y la lista queda vacía (apunta a null).
 - En memoria, los nodos no están continuos, pero lógicamente quedan conectados.  
 
 En cuanto a rendimiento, agregar al final implica recorrer toda la lista (O(n)), a menos que se guarde un puntero directo al último nodo.
+
+---
+
+### **10. Analiza una situación en la que utilizar una lista enlazada sería más ventajoso que utilizar un arreglo.**
+
+La lista enlazada es más ventajosa cuando hay que insertar o eliminar
+elementos en posiciones intermedias.\
+En un arreglo esas operaciones son costosas porque hay que mover
+elementos, pero en la lista solo se actualizan punteros.
+
+------------------------------------------------------------------------
+
+### **11. Después de estudiar el manejo de memoria en listas enlazadas, ¿cómo aplicarías este conocimiento para diseñar una estructura de datos personalizada para una aplicación creativa?**
+
+Si diseñara mi propia estructura, tendría en cuenta:\
+- Usar punteros controlados y liberar memoria siempre.\
+- Implementar destructores que limpien todo.\
+- Mantener la eficiencia de creación y destrucción.
+
+Por ejemplo, para un proyecto de arte generativo con partículas, usaría
+listas para manejar dinámicamente la vida de cada partícula.
+
+------------------------------------------------------------------------
+
+### **12. Reflexiona sobre las diferencias en la gestión de memoria entre C++ y un lenguaje con recolección de basura automática como C#.**
+
+En C++ el programador controla todo con `new` y `delete`. Eso da más
+control y rendimiento, pero también más riesgo de errores.\
+En C# la memoria se gestiona automáticamente con garbage collector, lo
+que evita fugas, pero se pierde el control exacto sobre cuándo se libera
+la memoria.
+
+------------------------------------------------------------------------
+
+### **13. Imagina que estás optimizando una pieza de arte generativo que usa listas enlazadas para representar elementos en movimiento.**
+
+Tendría en cuenta:\
+- Liberar la memoria de los nodos al eliminar elementos.\
+- Usar destructores o `clear()` para limpiar al reiniciar.\
+- Revisar el rendimiento porque demasiados nodos pueden ser lentos.\
+- Manejar punteros con cuidado para evitar fugas de memoria.
+
+------------------------------------------------------------------------
+
+### **14. Pruebas: pregunta a ChatGPT cómo podrías probar las partes del programa y el programa completo. Luego realiza las pruebas y verifica si los resultados coinciden con tus expectativas.  
+---
+
+## 🔹 Prueba 1: Constructor `LinkedList`
+- **Acción realizada:** Inicialicé una lista con `LinkedList list;` y revisé `head`, `tail` y `size`.
+- **Expectativa:** Que `head` y `tail` apunten al mismo nodo y que `size = 1`.
+- **Resultado obtenido:**  
+  ```
+  Head: (512, 384)
+  Tail: (512, 384)
+  Size: 1
+  ```
+- **Conclusión:** El constructor funcionó correctamente y creó el primer nodo en el centro de la pantalla. ✅
+
+---
+
+## 🔹 Prueba 2: `addNode(float x, float y)`
+- **Acción realizada:** Agregué dos nodos con coordenadas (100,100) y (200,200). Revisé el tamaño y la posición de `tail`.
+- **Expectativa:** Que `size = 3` y `tail = (200,200)`.
+- **Resultado obtenido:**  
+  ```
+  Size: 3
+  Tail position: (200, 200)
+  ```
+- **Conclusión:** Los nodos se agregaron y enlazaron correctamente. El puntero `tail` se actualizó. ✅
+
+---
+
+## 🔹 Prueba 3: `update(float x, float y)`
+- **Acción realizada:** Llamé a `list.update(400,300)` y recorrí la lista para imprimir posiciones.
+- **Expectativa:** Que el primer nodo tomara la nueva posición y que los demás heredaran las anteriores.
+- **Resultado obtenido:**  
+  ```
+  Node 1: (400, 300)
+  Node 2: (512, 384)
+  Node 3: (100, 100)
+  ```
+- **Conclusión:** El método funciona bien. Los nodos siguen la lógica de "serpiente". ✅
+
+---
+
+## 🔹 Prueba 5: `clear()`
+- **Acción realizada:** Llamé a `list.clear()` y revisé `head`, `tail` y `size`.
+- **Expectativa:** Que la lista quedara vacía (`head = nullptr`, `tail = nullptr`, `size = 0`).
+- **Resultado obtenido:**  
+  ```
+  Head after clear: 0x0
+  Tail after clear: 0x0
+  Size after clear: 0
+  ```
+- **Conclusión:** La memoria fue liberada correctamente y no quedaron nodos huérfanos. ✅
+
+---
