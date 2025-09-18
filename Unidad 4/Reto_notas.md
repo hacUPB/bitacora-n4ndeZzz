@@ -27,3 +27,5 @@
 -   Tecla **`c`**: cambia el color de **todas** las gotas y partículas a
     un mismo color.
 -   Tecla **`m`**: agrega más gotas de lluvia al sistema.
+
+<video controls src="Video (2).mp4" title="Title"></video>
