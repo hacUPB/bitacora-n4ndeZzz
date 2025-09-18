@@ -1,5 +1,3 @@
-<video controls src="Video.mp4" title="Title"></video>
-
 
 ## Gestión de Memoria (Stack vs. Heap) 
 
@@ -21,3 +19,5 @@ En resumen: los datos grandes y persistentes van al **Heap**; los datos pequeño
 2.  **Organización de Datos:** Viste que agrupar variables relacionadas en `structs` (como `Sphere` y `GridParams`) hace el código mucho más limpio y fácil de entender que tener muchas variables sueltas.
 
 3.  **Transformación de Coordenadas:** La función de *raycasting* te enseñó un concepto clave: cómo traducir una acción en un espacio 2D (el clic del mouse en la pantalla) a un concepto en un espacio 3D (un rayo que viaja por el mundo virtual) para poder interactuar con los objetos.
+
+![alt text](Imagenes/Prueba.png)
