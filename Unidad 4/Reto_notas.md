@@ -28,4 +28,6 @@
     un mismo color.
 -   Tecla **`m`**: agrega más gotas de lluvia al sistema.
 
-<video controls src="Video (2).mp4" title="Title"></video>
+![alt text](Imagenes/imagen.png)
+
+![alt text](<Imagenes/Imagen 2.png>)
