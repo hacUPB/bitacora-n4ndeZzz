@@ -9,7 +9,7 @@ En resumen: los datos grandes y persistentes van al **Heap**; los datos pequeño
 
 ---
 
-### ## Conceptos Básicos de Programación Gráfica 💡
+### ## Conceptos Básicos de Programación Gráfica 
 
 1.  **El Ciclo de la Aplicación:** Aprendiste el "corazón" de toda aplicación gráfica o de videojuego:
     * **`setup()`:** Se ejecuta **una vez** para inicializar todo.
