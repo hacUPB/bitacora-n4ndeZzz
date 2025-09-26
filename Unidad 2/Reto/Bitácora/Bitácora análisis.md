@@ -88,7 +88,7 @@ Aquí `*punt` representa la variable a la que `punt` apunta. Si `punt` apunta a 
 
 # [Reto 6,7](<../Códigos/Reto 6-7.asm>)
 
-**Cómo funciona la parte clave (bis = *p_var;)**  
+**Cómo funciona la parte clave (bis = *p_var;)**
 - @18 → Cargamos en A la dirección de p_var.
 - A=M → Ahora A pasa a ser el valor guardado en p_var, que es la dirección de var.
 - D=M → Guardamos en D el contenido de esa dirección (el valor de var).
