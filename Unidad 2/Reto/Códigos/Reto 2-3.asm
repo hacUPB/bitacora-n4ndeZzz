@@ -36,8 +36,7 @@ M=D
     0;JMP
 
 
-//Este codigo simbolicamente es muy similar a el del while, por lo que al menos para este ejercicio puedo concluir que es mas facil con el ciclo while
-//esto porque puede ser mas corto debido a que el for necesita un cuerpo y un lugar para la condicion como LOOP
+____________________________
 
 // sum = 0
 @sum

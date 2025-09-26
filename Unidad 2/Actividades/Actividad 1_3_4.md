@@ -29,7 +29,7 @@ dibujen en pantalla o lean del teclado manipulando directamente las
 posiciones de memoria asignadas.
 
 ## C) Inventa un programa que haga uso de la entrada-salida mapeada a memoria.
-[Programa que lleva los primeros valores de la pantalla](Actividad_1C.asm)
+[Programa que llena los primeros valores de la pantalla](Actividad_1C.asm)
 
 ## D) Investiga el funcionamiento del programa con el simulador.
 ![alt text](../Imagenes/1-C.png)
@@ -39,11 +39,13 @@ Adjunto estas 2 imágenes con el fin de mostrar el resultado, **¿Qué es lo que
 ______________________________________
 
 # Actividad 3
-[Código D](Actividad_3.asm)
+[Código D](Actividad_3.asm)  
+
 https://youtu.be/C42RgcUxf7Y
 
 # Actividad 4
-[Código D,E](Actividad_4.asm)
+[Código D,E](Actividad_4.asm)  
+
 https://youtu.be/HuMm0Z3GWyY
 
 
