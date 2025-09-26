@@ -1,5 +1,5 @@
-(ASCII 68) = pintar negro
-(ASCII 69) = pintar blanco
+//(ASCII 68) = pintar negro
+//(ASCII 69) = pintar blanco
 
 (LOOP)
 @KBD
