@@ -22,14 +22,3 @@ M=D
 0;JMP
 
 
-// Explicación:
-
-//Usamos RAM[16] como var.
-
-//Usamos RAM[17] como punt.
-
-//La instrucción @value carga un número en el registro A.
-
-//M significa la memoria en la dirección que está en A.
-
-//Para acceder a *punt, primero cargamos el valor de punt en A (A=M), y luego escribimos ahí.

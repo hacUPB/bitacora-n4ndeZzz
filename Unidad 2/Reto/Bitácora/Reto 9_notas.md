@@ -113,6 +113,8 @@ Estado importante de la RAM **tras** la ejecución completa del programa (valore
 Así, `c = 15` (6 + 9) y ese valor se copia a RAM[0] para "mostrarlo".
 
 ---
+![alt text](<../../Imagenes/Resultado reto 9.png>)  
+
 
 ## Limitaciones y mejoras posibles
 

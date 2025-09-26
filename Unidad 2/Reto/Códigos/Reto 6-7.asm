@@ -26,14 +26,3 @@ M=D     // bis = D
 (END)
 @END
 0;JMP
-
-
-//Cómo funciona la parte clave (bis = *p_var;)
-
-//@18 → Cargamos en A la dirección de p_var.
-
-//A=M → Ahora A pasa a ser el valor guardado en p_var, que es la dirección de var.
-
-//D=M → Guardamos en D el contenido de esa dirección (el valor de var).
-
-//@17 y M=D → Escribimos ese valor en bis.
