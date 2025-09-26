@@ -29,7 +29,7 @@ dibujen en pantalla o lean del teclado manipulando directamente las
 posiciones de memoria asignadas.
 
 ## C) Inventa un programa que haga uso de la entrada-salida mapeada a memoria.
-[text](Actividad_1C.asm)
+[Programa que lleva los primeros valores de la pantalla](Actividad_1C.asm)
 
 ## D) Investiga el funcionamiento del programa con el simulador.
 ![alt text](../Imagenes/1-C.png)
@@ -39,13 +39,14 @@ Adjunto estas 2 imágenes con el fin de mostrar el resultado, **¿Qué es lo que
 ______________________________________
 
 # Actividad 3
-[text](Actividad_3.asm)
+[Código D](Actividad_3.asm)
+<video controls src="../Imagenes/Prueba actividad 3_1.mp4" title="Title"></video>
 
 # Actividad 4
-[text](Actividad_4.asm)
+[Código D,E](Actividad_4.asm)
 <video controls src="../Imagenes/Prueba actividad 3.mp4" title="Title"></video>
 
-## Análisis del mapeado de teclado y E/S en Hack (código inicial)
+## Análisis del mapeado de teclado y E/S en Hack
 
 Hice estas actividades en desorden, ya que me parecía mas entendible primer hacer la cuarta, ya que el mecanismo de dibujas y borrar al presionar una tecla es muy similar.
 
@@ -53,7 +54,7 @@ Cuando probé el primer código, me di cuenta de que el registro KBD (dirección
 
 El detalle es que el programa solo hacía esas acciones si presionaba una tecla en específico, y cuando soltaba todas las teclas (KBD = 0), no pasaba nada. Esto significa que la lógica del primer código solo reaccionaba a entradas exactas, pero no contemplaba el estado de “ninguna tecla presionada”.
 
-## Análisis del mapeado de teclado y E/S en Hack (código modificado)
+## Análisis del mapeado de teclado y E/S en Hack
 
 Cuando reorganicé el código para que primero verificara si la tecla era D, y en cualquier otro caso (incluido KBD = 0) saltara al bloque de borrar, el comportamiento cambió.
 
