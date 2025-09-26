@@ -40,11 +40,12 @@ ______________________________________
 
 # Actividad 3
 [Código D](Actividad_3.asm)
-<video controls src="../Imagenes/Prueba actividad 3_1.mp4" title="Title"></video>
+https://youtu.be/C42RgcUxf7Y
 
 # Actividad 4
 [Código D,E](Actividad_4.asm)
-<video controls src="../Imagenes/Prueba actividad 3.mp4" title="Title"></video>
+https://youtu.be/HuMm0Z3GWyY
+
 
 ## Análisis del mapeado de teclado y E/S en Hack
 
