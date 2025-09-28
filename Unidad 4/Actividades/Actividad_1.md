@@ -116,7 +116,7 @@ Tendría en cuenta:
   Tail: (512, 384)
   Size: 1
   ```
-  ![alt text](<Imagenes/Prueba 1.png>)
+![alt text](<../Imagenes/Prueba 1.png>)
 
 - **Conclusión:** El constructor funcionó correctamente y creó el primer nodo en el centro de la pantalla. 
 
@@ -130,7 +130,7 @@ Tendría en cuenta:
   Size: 3
   Tail position: (200, 200)
   ```
-  ![alt text](<Imagenes/Prueba 2.png>)  
+ ![alt text](<../Imagenes/Prueba 2.png>)
 
 - **Conclusión:** Los nodos se agregaron y enlazaron correctamente. El puntero `tail` se actualizó. 
 
@@ -145,7 +145,7 @@ Tendría en cuenta:
   Node 2: (512, 384)
   Node 3: (100, 100)
   ```
-  ![alt text](<Imagenes/Prueba 3.png>)
+  ![alt text](<../Imagenes/Prueba 3.png>)
 
 - **Conclusión:** El método funciona bien. Los nodos siguen la lógica de "serpiente". 
 
@@ -160,8 +160,8 @@ Tendría en cuenta:
   Tail after clear: 0x0
   Size after clear: 0
   ```
-![alt text](<Imagenes/Prueba 4 A.png>)
-![alt text](<Imagenes/Prueba 4 B.png>)
+![alt text](<../Imagenes/Prueba 4 A.png>)
+![alt text](<../Imagenes/Prueba 4 B.png>)
 
 - **Conclusión:** La memoria fue liberada correctamente y no quedaron nodos huérfanos. 
 
