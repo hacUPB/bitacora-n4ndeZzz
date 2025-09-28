@@ -1,9 +1,10 @@
 # Actividad 7     
 - __¿Qué sucede cuando presionas la tecla “c”?(primer ejercicio)__  
-![alt text](../Imagenes/ej7.png)
+![alt text](../Imagenes/ej7.png)  
 
 - __¿Qué sucede cuando presionas la tecla “c”?(segundo ejercicio modificado)__  
-![alt text](../Imagenes/7-2.png) 
+![alt text](../Imagenes/7-2.png)
+ 
 Parece que funciona porque se dibuja una vez desde la función, pero enseguida el programa queda con un puntero inválido en el vector, provocando errores en los frames siguientes. Por lo que puede no dibujar nada, dibujar valores basura, o incluso crashear.  
 
 Se ejecuta la función createObjectInStack(), que en realidad ahora crea un objeto en el heap con new Sphere(...).  
