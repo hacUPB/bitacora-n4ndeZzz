@@ -1,9 +1,7 @@
-
-3,1) 
-
+# Actividad 3.1: 
 Este programa dibuja partículas (círculos) que siguen el movimiento del mouse y cambian de color al hacer clic.
 
-## Funciones y su funcionamiento
+## Funciones y su funcionamiento(análisis)
 
 ### 1. `void ofApp::setup()`
 ```cpp
@@ -55,7 +53,9 @@ particleColor = ofColor(ofRandom(255), ofRandom(255), ofRandom(255));
 ---
 
 
-3,2)
+# Actividad 3.2  
+
+__En este código lo que hice fue cambiar el color del background, el tamaño de las partículas, y también el de la esfera__:  
 
 ```py  
 
@@ -94,4 +94,5 @@ void ofApp::mousePressed(int x, int y, int button) {
 
 ```  
 
-__En este código lo que hice fue cambiar el color del background, el tamaño de las partículas, y también el de la esfera__  
+![Evidencia](<../Imagenes/tecer.2 ejercicio u3.png>)
+

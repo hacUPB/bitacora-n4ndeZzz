@@ -1,4 +1,4 @@
-# 5)   
+# Actividad 5:    
 
 ## 1. ¿Cuál es la definición de un puntero?
 Un puntero es una variable que no guarda directamente un valor, sino que guarda **la dirección de memoria de otra variable u objeto**.  
@@ -54,9 +54,7 @@ selectedSphere->update(ofGetMouseX(), ofGetMouseY());
 El programa va a buscar en memoria la esfera seleccionada y actualiza sus coordenadas para que se mueva con el mouse.
 
 ---
-# 6)  
- 
-# Problema en el código de selección y movimiento de esferas
+# Actividad 6: Problema en el código de selección y movimiento de esferas
 
 ## Error identificado
 En el código actual, cuando se selecciona una esfera con click izquierdo, esta queda **permanentemente pegada al puntero del mouse**.  
@@ -64,8 +62,8 @@ Esto sucede porque en la función `update()` siempre se actualiza la posición d
 Además, nunca se "suelta" la esfera porque no existe un evento `mouseReleased` que la deseleccione.
 
 ## Consecuencias
-- Una vez que se hace click sobre una esfera, seguirá moviéndose aunque ya no mantengas presionado el mouse.  
-- Si haces click fuera de cualquier esfera, la selección previa no se desactiva.  
+- Una vez que se hace click sobre una esfera, seguirá moviéndose aunque ya no mantenga presionado el mouse.  
+- Si se hace click fuera de cualquier esfera, la selección previa no se desactiva.  
 - (Opcional) También hay una fuga de memoria, ya que las esferas se crean con `new` y nunca se liberan.
 
 ## Solución propuesta
@@ -75,11 +73,9 @@ Además, nunca se "suelta" la esfera porque no existe un evento `mouseReleased` 
 2. **Liberar la esfera al soltar el mouse:**  
    Implementar `mouseReleased` para poner `selectedSphere = nullptr`.
 
-3. **Opcional (buena práctica):**  
-   - Descartar la selección si no se hace click sobre ninguna esfera.  
-   - Liberar la memoria en el destructor o usar vectores de objetos en lugar de punteros.
-
 ## Código modificado (fragmentos relevantes)
+
+([Video comparativo](https://youtu.be/9GdUVNAQpug))
 
 ```cpp
 void ofApp::mousePressed(int x, int y, int button) {
@@ -106,3 +102,9 @@ void ofApp::mouseReleased(int x, int y, int button) {
         selectedSphere = nullptr;
     }
 }
+```
+
+```h
+	void mouseReleased(int x, int y, int button);
+	void mouseDragged(int x, int y, int button);
+```    

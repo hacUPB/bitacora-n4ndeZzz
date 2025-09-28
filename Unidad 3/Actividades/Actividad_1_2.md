@@ -1,15 +1,18 @@
-### Actividad 1:  
+# Actividad 1:  
+![alt text](<../Imagenes/Primer ejercicio u3.png>)
 
 En esta primera actividad pudimos evidenciar como el background se modifica para utlizar un color negro, y en la funcion draw se dibuja un circulo color blanco, y obtiene la posición del mouse para seguirla.
 
-### Actividad 2:  
+# Actividad 2:  
+![alt text](<../Imagenes/segundo ejercicio u3.png>)
 
 __1)__     private:
 
         vector<ofVec2f> particles;
         ofColor particleColor;
 
-__2-7)__ La funcion setup da inicio al programa, luego la update se encarga de ejecutarse constantemente para actualizar el programa y mostrarlo en el renderizado (draw), en caso de ser necesario.  
+__2-7)__ 
+La funcion setup da inicio al programa, luego la update se encarga de ejecutarse constantemente para actualizar el programa y mostrarlo en el renderizado (draw), en caso de ser necesario.  
 
 Se crean un vector y una variable para determinar el recorrido del mouse y el color de las particulas (el movimiento y presion del mouse tambien fueron declaradas)  
 
