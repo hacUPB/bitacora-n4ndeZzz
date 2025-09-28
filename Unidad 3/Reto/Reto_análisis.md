@@ -27,8 +27,6 @@ En resumen: los datos grandes y persistentes van al **Heap**; los datos pequeño
 
 3.  **Transformación de Coordenadas:** La función de *raycasting* me enseñó un concepto clave: cómo traducir una acción en un espacio 2D (el clic del mouse en la pantalla) a un concepto en un espacio 3D (un rayo que viaja por el mundo virtual) para poder interactuar con los objetos.
 
-![alt text](Imagenes/Prueba.png)
-
 https://youtu.be/c8TfET1w7Dc
 
 ## Conclusiones
