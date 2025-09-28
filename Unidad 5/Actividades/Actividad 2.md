@@ -1,5 +1,5 @@
 ## Ejercicio 1
-![alt text](Imagenes/Experimento-1.png)
+![alt text](../Imagenes/Experimento-1.png)
 En este primer ejercicio trabajé con **polimorfismo y tablas virtuales (vtable)**.  
 Definí una clase `Base` con un método virtual `display()` y una clase `Derived` que sobreescribe este método. Luego, dentro de la función `setup()` probé cómo se comportan los objetos al imprimir la dirección de su vtable.
 
@@ -34,7 +34,7 @@ Con este ejemplo confirmé que cada clase que tiene funciones virtuales contiene
 ---
 
 ## Ejercicio 2
-![alt text](<Imagenes/Experimento 2.png>)
+![alt text](<../Imagenes/Experimento 2.png>)
 En el segundo ejercicio trabajé con los **modificadores de acceso en C++**: `private`, `protected` y `public`.  
 Creé una clase llamada `AccessControl` para ejemplificar cómo funcionan las restricciones de acceso a los atributos.
 
@@ -73,7 +73,7 @@ El atributo público se puede modificar sin problema, mientras que el protegido 
 ---
 
 ## Ejercicio 3
-![alt text](<Imagenes/Experimento 3.png>)
+![alt text](<../Imagenes/Experimento 3.png>)
 ### ¿Cómo implementa el compilador el encapsulamiento?
 
 El encapsulamiento en C++ es implementado por el compilador como una serie de reglas de acceso que se verifican en tiempo de compilación, no como una restricción en tiempo de ejecución.

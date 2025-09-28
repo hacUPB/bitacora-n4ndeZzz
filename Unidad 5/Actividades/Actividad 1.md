@@ -13,8 +13,7 @@ EXPLORACIÓN:
 Particle(Clase) p1(objeto);
 Particle(Clase) p2(objeto);
 
-![alt text](Imagenes/Ensayo.png)
-
+![alt text](../Imagenes/Ensayo.png)
 
 Basandonos en los resultados, tener en cuenta que cada objeto utiliza el peso que sumen sus atributos, en este caso los flotantes, cada uno ocupa 4 bytes.
 
@@ -48,7 +47,9 @@ Respuesta del prompt:
 *Respuesta del prompt:* Una variable de clase declarada con static no pertenece a cada objeto, sino a la clase en sí. Se almacena una sola vez en memoria (en la sección data del programa), compartida por todas las instancias, por eso no afecta el sizeof(Clase) o no ocupa espacio dentro de cada objeto.
 
 Resultado de experimento 1 y 2 para las respuestas anteriores:
-![alt text](<Imagenes/Imagen primer paso.png>)![alt text](<Imagenes/Resultadops segundo exp.png>) 
+
+![alt text](<../Imagenes/Imagen primer paso.png>)
+![alt text](<../Imagenes/Resultadops segundo exp.png>)
 
 ### 6) ¿Qué es un objeto desde la perspectiva de la memoria?  
 Un objeto en C++ es un bloque de memoria reservado según el sizeof de su clase.  
