@@ -69,7 +69,7 @@ Es una gestión de memoria automática y segura. De esta forma, puedo trabajar c
 
 ---
 
-# Informe: Reflexiones sobre la gestión de memoria en la implementación de una Queue en C++
+# Reflexiones sobre la gestión de memoria en la implementación de una Queue en C++
 
 ## 1. ¿Cómo se maneja la memoria en una implementación manual de una queue en C++?
 
