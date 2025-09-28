@@ -1,3 +1,5 @@
+# Reflexiones sobre la gestión de memoria en la implementación de un Stack en C++
+
 ## 1. ¿Cómo se gestiona la memoria en una implementación manual de un stack en C++? Reflexiona sobre cómo el uso de new y delete en la creación y destrucción de nodos afecta el rendimiento y la seguridad de tu programa.
 Cuando empecé a programar mi stack manual, me di cuenta de que me convertí en el "administrador" directo de la memoria de mi programa. Cada vez que presiono la tecla **'a'**, mi función `push` usa `new Node(...)`.  
 Lo que realmente estoy haciendo ahí es pedirle al sistema un trocito de memoria del **heap** para guardar la posición de mi nuevo círculo.
@@ -17,7 +19,7 @@ Los casilleros siguen a tu nombre, pero has perdido las llaves y ya no puedes us
 
 Para una aplicación que corre por mucho tiempo, como una instalación interactiva en un museo, una pequeña fuga se convierte en un problema gigante.  
 La aplicación consumiría más y más RAM con el paso de las horas hasta que, inevitablemente, el sistema operativo la cerraría.  
-Así que, sí, liberar la memoria es básicamente hacer una buena limpieza para que el programa se mantenga saludable. 🧹
+Así que, sí, liberar la memoria es básicamente hacer una buena limpieza para que el programa se mantenga saludable. 
 
 ---
 
@@ -48,9 +50,9 @@ También sé que es la base de cómo el procesador gestiona las llamadas a funci
 ## 5. ¿Cómo podrías modificar el stack para almacenar tipos de datos más complejos (e.g., objetos con múltiples atributos) sin causar problemas de memoria? Reflexiona sobre cómo gestionar adecuadamente la memoria para objetos más complejos y cómo esto afectaría tu implementación actual.
 Mi stack actual solo guarda un `ofVec2f`, que es simple. Pero, ¿y si quisiera guardar un objeto más complejo, como una **Particula** con posición, velocidad, color y tiempo de vida?
 
-Si simplemente usara un puntero crudo (`Particula*`), estaría pidiendo a gritos tener problemas. Tendría que acordarme de hacer `delete` al objeto `Particula` antes de hacer `delete` al `Node`, lo que complica la lógica y aumenta el riesgo de errores.
+Si simplemente usara un puntero crudo (`Particula*`), podría tener problemas. Tendría que acordarme de hacer `delete` al objeto `Particula` antes de hacer `delete` al `Node`, lo que complica la lógica y aumenta el riesgo de errores.
 
-La solución moderna que he estado viendo en clase son los **punteros inteligentes**.  
+La solución que he estado viendo en clase son los **punteros inteligentes**.  
 Modificaría mi `Node` para que en lugar de un `ofVec2f`, tuviera un `std::unique_ptr<Particula>`.
 
 ```cpp
@@ -63,4 +65,30 @@ public:
     // ...
 };
 ```
-Es una gestión de memoria automática y segura. De esta forma, puedo trabajar con objetos todo lo complejos que quiera sin tener que preocuparme por causar fugas de memoria. ¡Es un salvavidas! 🚀
+Es una gestión de memoria automática y segura. De esta forma, puedo trabajar con objetos todo lo complejos que quiera sin tener que preocuparme por causar fugas de memoria.
+
+---
+
+# Informe: Reflexiones sobre la gestión de memoria en la implementación de una Queue en C++
+
+## 1. ¿Cómo se maneja la memoria en una implementación manual de una queue en C++?
+
+En mi implementación manual de una queue, la memoria se gestiona mediante la creación dinámica de nodos con `new` al encolar y la liberación con `delete` al desencolar. Cada vez que se encola un elemento, se reserva espacio en el heap y se actualiza el puntero `rear`. Al desencolar, se libera explícitamente el nodo al que apuntaba `front`. Este proceso garantiza que no haya acumulación de nodos innecesarios en memoria, pero implica responsabilidad adicional: si olvido liberar memoria al desencolar, pueden producirse fugas. Aunque estas operaciones son relativamente eficientes, cada llamada a `new` y `delete` añade un costo en comparación con estructuras que gestionan memoria de forma automática.
+
+## 2. ¿Qué desafíos específicos presenta la implementación de una queue en comparación con un stack en términos de gestión de memoria?
+
+La queue introduce más complejidad que el stack porque debo mantener dos punteros: `front` y `rear`. En el stack solo me preocupo por un nodo (el tope), pero en la queue debo asegurar que ambos punteros estén siempre correctamente actualizados. Por ejemplo, cuando la queue queda vacía después de un `dequeue`, es necesario ajustar `rear = nullptr` además de `front`. Si no gestiono correctamente estos punteros, puedo perder referencias a nodos, lo que genera fugas de memoria o accesos inválidos.
+
+## 3. ¿Cómo afecta la estructura FIFO (First In, First Out) de una queue a su uso en diferentes tipos de problemas?
+
+La naturaleza **FIFO** de la queue determina que el primer elemento en entrar será el primero en salir. Esto la hace especialmente útil en problemas donde el orden de llegada define el orden de procesamiento. Por ejemplo, en colas de espera de procesos, gestión de tareas en sistemas operativos o simulación de líneas de atención al cliente, esta propiedad garantiza justicia y organización. A diferencia del stack, que prioriza lo último agregado, la queue se enfoca en preservar el orden cronológico de los datos.
+
+## 4. ¿Cómo podría implementar una queue circular y cuál sería su ventaja respecto a una queue lineal en términos de uso de memoria?
+
+Una queue circular se puede implementar utilizando un arreglo y gestionando los índices de manera que, cuando se alcance el final, se regrese al inicio del arreglo. La principal ventaja es que se aprovecha mejor la memoria disponible, ya que en una queue lineal los espacios liberados al frente no se reutilizan de inmediato. En cambio, con la queue circular, esos espacios se pueden reutilizar automáticamente, evitando desperdicio de memoria. Para implementarla necesitaría controlar cuidadosamente las condiciones de “cola llena” y “cola vacía” mediante los índices `front` y `rear`.
+
+## 5. ¿Qué problemas podrían surgir si no se gestionan correctamente los punteros `front` y `rear` en una queue, y cómo podría evitarlos?
+
+Si no gestiono bien `front` y `rear`, puedo tener problemas como pérdida de acceso a nodos aún no liberados (lo que ocasiona fugas de memoria) o intentos de acceder a nodos que ya fueron eliminados (lo que genera errores en tiempo de ejecución). Estos problemas se evitan con una gestión cuidadosa de punteros, asegurando que después de cada `enqueue` y `dequeue` ambos punteros reflejen correctamente el estado de la estructura. Además, agregar comprobaciones de nulidad antes de acceder a los nodos es una práctica que aumenta la seguridad del programa.
+
+---

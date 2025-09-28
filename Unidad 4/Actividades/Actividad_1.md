@@ -66,7 +66,7 @@ En cuanto a rendimiento, agregar al final implica recorrer toda la lista (O(n)),
 ### **10. Analiza una situación en la que utilizar una lista enlazada sería más ventajoso que utilizar un arreglo.**
 
 La lista enlazada es más ventajosa cuando hay que insertar o eliminar
-elementos en posiciones intermedias.\
+elementos en posiciones intermedias.
 En un arreglo esas operaciones son costosas porque hay que mover
 elementos, pero en la lista solo se actualizan punteros.
 
@@ -74,9 +74,9 @@ elementos, pero en la lista solo se actualizan punteros.
 
 ### **11. Después de estudiar el manejo de memoria en listas enlazadas, ¿cómo aplicarías este conocimiento para diseñar una estructura de datos personalizada para una aplicación creativa?**
 
-Si diseñara mi propia estructura, tendría en cuenta:\
-- Usar punteros controlados y liberar memoria siempre.\
-- Implementar destructores que limpien todo.\
+Si diseñara mi propia estructura, tendría en cuenta:
+- Usar punteros controlados y liberar memoria siempre.
+- Implementar destructores que limpien todo.
 - Mantener la eficiencia de creación y destrucción.
 
 Por ejemplo, para un proyecto de arte generativo con partículas, usaría
@@ -87,7 +87,7 @@ listas para manejar dinámicamente la vida de cada partícula.
 ### **12. Reflexiona sobre las diferencias en la gestión de memoria entre C++ y un lenguaje con recolección de basura automática como C#.**
 
 En C++ el programador controla todo con `new` y `delete`. Eso da más
-control y rendimiento, pero también más riesgo de errores.\
+control y rendimiento, pero también más riesgo de errores.
 En C# la memoria se gestiona automáticamente con garbage collector, lo
 que evita fugas, pero se pierde el control exacto sobre cuándo se libera
 la memoria.
@@ -96,10 +96,10 @@ la memoria.
 
 ### **13. Imagina que estás optimizando una pieza de arte generativo que usa listas enlazadas para representar elementos en movimiento.**
 
-Tendría en cuenta:\
-- Liberar la memoria de los nodos al eliminar elementos.\
-- Usar destructores o `clear()` para limpiar al reiniciar.\
-- Revisar el rendimiento porque demasiados nodos pueden ser lentos.\
+Tendría en cuenta:
+- Liberar la memoria de los nodos al eliminar elementos.
+- Usar destructores o `clear()` para limpiar al reiniciar.
+- Revisar el rendimiento porque demasiados nodos pueden ser lentos.
 - Manejar punteros con cuidado para evitar fugas de memoria.
 
 ------------------------------------------------------------------------
@@ -107,7 +107,7 @@ Tendría en cuenta:\
 ### **14. Pruebas: pregunta a ChatGPT cómo podrías probar las partes del programa y el programa completo. Luego realiza las pruebas y verifica si los resultados coinciden con tus expectativas.  
 ---
 
-## 🔹 Prueba 1: Constructor `LinkedList`
+## Prueba 1: Constructor `LinkedList`
 - **Acción realizada:** Inicialicé una lista con `LinkedList list;` y revisé `head`, `tail` y `size`.
 - **Expectativa:** Que `head` y `tail` apunten al mismo nodo y que `size = 1`.
 - **Resultado obtenido:**  
@@ -116,11 +116,13 @@ Tendría en cuenta:\
   Tail: (512, 384)
   Size: 1
   ```
-- **Conclusión:** El constructor funcionó correctamente y creó el primer nodo en el centro de la pantalla. ✅
+  ![alt text](<Imagenes/Prueba 1.png>)
+
+- **Conclusión:** El constructor funcionó correctamente y creó el primer nodo en el centro de la pantalla. 
 
 ---
 
-## 🔹 Prueba 2: `addNode(float x, float y)`
+## Prueba 2: `addNode(float x, float y)`
 - **Acción realizada:** Agregué dos nodos con coordenadas (100,100) y (200,200). Revisé el tamaño y la posición de `tail`.
 - **Expectativa:** Que `size = 3` y `tail = (200,200)`.
 - **Resultado obtenido:**  
@@ -128,11 +130,13 @@ Tendría en cuenta:\
   Size: 3
   Tail position: (200, 200)
   ```
-- **Conclusión:** Los nodos se agregaron y enlazaron correctamente. El puntero `tail` se actualizó. ✅
+  ![alt text](<Imagenes/Prueba 2.png>)  
+
+- **Conclusión:** Los nodos se agregaron y enlazaron correctamente. El puntero `tail` se actualizó. 
 
 ---
 
-## 🔹 Prueba 3: `update(float x, float y)`
+## Prueba 3: `update(float x, float y)`
 - **Acción realizada:** Llamé a `list.update(400,300)` y recorrí la lista para imprimir posiciones.
 - **Expectativa:** Que el primer nodo tomara la nueva posición y que los demás heredaran las anteriores.
 - **Resultado obtenido:**  
@@ -141,11 +145,13 @@ Tendría en cuenta:\
   Node 2: (512, 384)
   Node 3: (100, 100)
   ```
-- **Conclusión:** El método funciona bien. Los nodos siguen la lógica de "serpiente". ✅
+  ![alt text](<Imagenes/Prueba 3.png>)
+
+- **Conclusión:** El método funciona bien. Los nodos siguen la lógica de "serpiente". 
 
 ---
 
-## 🔹 Prueba 5: `clear()`
+## Prueba 4: `clear()`
 - **Acción realizada:** Llamé a `list.clear()` y revisé `head`, `tail` y `size`.
 - **Expectativa:** Que la lista quedara vacía (`head = nullptr`, `tail = nullptr`, `size = 0`).
 - **Resultado obtenido:**  
@@ -154,6 +160,9 @@ Tendría en cuenta:\
   Tail after clear: 0x0
   Size after clear: 0
   ```
-- **Conclusión:** La memoria fue liberada correctamente y no quedaron nodos huérfanos. ✅
+![alt text](<Imagenes/Prueba 4 A.png>)
+![alt text](<Imagenes/Prueba 4 B.png>)
+
+- **Conclusión:** La memoria fue liberada correctamente y no quedaron nodos huérfanos. 
 
 ---
