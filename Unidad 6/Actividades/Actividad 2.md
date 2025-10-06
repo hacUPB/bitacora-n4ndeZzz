@@ -73,8 +73,8 @@ Aquí es donde realmente hice la diferencia. Añadí un nuevo "caso" en la fábr
 
 ## Adición de un nuevo evento
 
-[OFAPP.CPP](Códigos/Añadir estado.cpp)
-[OFAPP.H](Códigos/Añadir estado.h)
+[Estado.h](<Códigos/Añadir estado.h>)
+[Estado.cpp](<Códigos/Añadir estado.cpp>)
 
 ### Cambios en el código:
 
@@ -146,9 +146,8 @@ Aquí es donde realmente hice la diferencia. Añadí un nuevo "caso" en la fábr
 
 ## Modificación del comportamiento de las partículas
 
-[PARTÍCULA.CPP](Códigos/Modificar comportamiento.cpp)
-[PARTÍCULA.H](Códigos/Modificar comportamiento.h)
-
+[Comportamiento.cpp](<Códigos/Modificar comportamiento.cpp>)
+[Comportamiento.h](<Códigos/Modificar comportamiento.h>)
 ---
 
 ### Cambios en el código:
@@ -226,8 +225,8 @@ Aquí es donde realmente hice la diferencia. Añadí un nuevo "caso" en la fábr
 
 ## Adición de nuevos eventos de notificación
 
-[OFAPP.CPP](Códigos/Notificaciones.cpp)
-[OFAPP.H](Códigos/Notificaciones.h)
+[Notificaciones.h](Códigos/Notificaciones.h)
+[Notificaciones.cpp](Códigos/Notificaciones.cpp)
 
 ### Cambios en el código:
 
@@ -288,3 +287,4 @@ Aquí es donde realmente hice la diferencia. Añadí un nuevo "caso" en la fábr
 * Su función sigue siendo la de instanciar partículas de distintos tipos, las cuales automáticamente quedan suscritas al sistema de notificación.
 
 ---
+
