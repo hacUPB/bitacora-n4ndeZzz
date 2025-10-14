@@ -144,7 +144,7 @@ Aquí es donde realmente hice la diferencia. Añadí un nuevo "caso" en la fábr
 
 ---
 
-## Modificación del comportamiento de las partículas
+## Modificación del comportamiento de las partículas:  
 
 [Comportamiento.cpp](<Códigos/Modificar comportamiento.cpp>)
 [Comportamiento.h](<Códigos/Modificar comportamiento.h>)
