@@ -288,3 +288,6 @@ Aquí es donde realmente hice la diferencia. Añadí un nuevo "caso" en la fábr
 
 ---
 
+
+
+[Video de las modificaciones hechas](https://youtu.be/ltMwfAgVQHE)
