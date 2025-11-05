@@ -70,4 +70,4 @@ La comunicación entre la aplicación y los shaders se da por medio de estas *un
    [ofApp.cpp](ofApp.cpp)  
 
 
-[Video con cambios y ensayo del original](https://youtu.be/lbDFIiJhBnM)
+[Video con cambios y ensayo del original](https://www.youtube.com/watch?v=d_HtT5g4D08)
